@@ -69,7 +69,7 @@ What should we call each of them?
 - rteme-Card
 
 #### What we'll do next:
-    Continue to learn more about how to create a card in Thursday's class.
+Continue to learn more about how to create a card in Thursday's class.
 
 
 ## Status check ins
