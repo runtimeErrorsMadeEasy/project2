@@ -3,6 +3,15 @@ This is for maintaining communication about your team's working meetings to "shi
 
 ## Meeting notes
 These are notes to be maintained PER date that you meet. What you did and what the next steps are
+### Meeting Date: 10/7
+
+#### What we did:
+We listened to Bryan talk about the parts of the project 2 repo, as well as what we needed to write our blog post about. We also worked on the first check in for this project which is located below.
+
+#### What we'll do next:
+We plan to work on getting our individual blog posts and our group check-in 1 done by this Sunday. As well as assign responsibilities to each person on our team.
+
+
 ### Meeting Date: 10/5
 
 #### What we did: 
@@ -57,8 +66,24 @@ In-Class activity:
 ## Status check ins
 These are dedicated status check-ins as this is a multi-week project
 ### Check-in 1
-- 
-- 
+Element Names:
+    - lc_icon
+    - lc_banner
+    - lc_scaffold
+    - lc_card
+Proporties:
+    - Color
+    - Size
+    - Margins
+    - States
+Design Considerations:
+    - Contrast
+    - Scalibility
+
+Next Steps:
+    - We plan to work on getting our individual blog posts and our group check-in 1 done by this Sunday. As well as assign responsibilities  
+      to each person on our team.
+
 ### Check-in 2
 - 
 - 
