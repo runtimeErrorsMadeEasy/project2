@@ -91,9 +91,8 @@ Design Considerations:
 - Contrast
 - Scalibility
 
-Next Steps:
-    - We plan to work on getting our individual blog posts and our group check-in 1 done by this Sunday. As well as assign responsibilities  
-      to each person on our team.
+Next Steps: We plan to work on getting our individual blog posts and our group check-in 1 done by this Sunday. As well as assign    
+            responsibilities to each person on our team.
 
 ### Check-in 2
 - 
