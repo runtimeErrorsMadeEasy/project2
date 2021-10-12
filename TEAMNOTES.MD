@@ -3,6 +3,16 @@ This is for maintaining communication about your team's working meetings to "shi
 
 ## Meeting notes
 These are notes to be maintained PER date that you meet. What you did and what the next steps are
+
+### Meeting Date: 10/12
+
+#### What we did:
+We listened to Bryan give feedback for our project 1 buttons, as well as what performance optimization techniques that we might want to use for our second project. We also worked on getting our started card.
+
+#### What we'll do next:
+We plan to work on the two articles we need to read for Thursday, as well as continuing our progress on our card.
+
+
 ### Meeting Date: 10/7
 
 #### What we did:
@@ -95,8 +105,13 @@ Next Steps: We plan to work on getting our individual blog posts and our group c
             responsibilities to each person on our team.
 
 ### Check-in 2
-- 
-- 
+- What did you take away from the portion of class about implementing SimpleColors?
+    We took away from the implementing SimpleColors lecture that 
+- What did you learn from other groups?
+    We learned that
+- What are your next steps?
+    Our next steps are 
+
 ### Check-in 3
 - 
 - 
