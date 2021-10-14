@@ -1,8 +1,16 @@
 # Team notes
 This is for maintaining communication about your team's working meetings to "ship" the project.
 
+
 ## Meeting notes
-These are notes to be maintained PER date that you meet. What you did and what the next steps are
+
+### Meeting Date: 10/14
+
+#### What we did:
+We listened to Bryan show us SimpleColors so then we don't have to look up the hex code for the colors we want. It also has the accent and dark mode for the colors we pick.
+
+#### What we'll do next:
+We plan to work on getting the icon and banner working for this Sunday's check-in.
 
 ### Meeting Date: 10/12
 
@@ -12,7 +20,6 @@ We listened to Bryan give feedback for our project 1 buttons, as well as what pe
 #### What we'll do next:
 We plan to work on the two articles we need to read for Thursday, as well as continuing our progress on our card.
 
-
 ### Meeting Date: 10/7
 
 #### What we did:
@@ -20,7 +27,6 @@ We listened to Bryan talk about the parts of the project 2 repo, as well as what
 
 #### What we'll do next:
 We plan to work on getting our individual blog posts and our group check-in 1 done by this Sunday. As well as assign responsibilities to each person on our team.
-
 
 ### Meeting Date: 10/5
 
@@ -83,7 +89,7 @@ Continue to learn more about how to create a card in Thursday's class.
 
 
 ## Status check ins
-These are dedicated status check-ins as this is a multi-week project
+
 ### Check-in 1
 Element Names:
 - lc_icon
@@ -105,12 +111,14 @@ Next Steps: We plan to work on getting our individual blog posts and our group c
             responsibilities to each person on our team.
 
 ### Check-in 2
-- What did you take away from the portion of class about implementing SimpleColors?
-    We took away from the implementing SimpleColors lecture that 
-- What did you learn from other groups?
-    We learned that
-- What are your next steps?
-    Our next steps are 
+What did you take away from the portion of class about implementing SimpleColors?
+- What we took away from the implementation of SimpleColors was that it is already a part of our repo so we just need to implement it. This will allow us to use names that are easier to understand for colors instead of their hex codes. As well as, make it easier for the colors to switch from light and dark modes for us.
+
+What did you learn from other groups?
+- We learned that we are in the same boat as other teams, where we are getting started and trying to figure out how to get all the elements to work the way we want them too.
+
+What are your next steps?
+- Our next steps are to get the icon to have basic API rendering, as well as the banner having API that supports two name slots and implements the icon.
 
 ### Check-in 3
 - 
