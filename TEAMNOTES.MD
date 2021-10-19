@@ -121,8 +121,9 @@ What are your next steps?
 - Our next steps are to get the icon to have basic API rendering, as well as the banner having API that supports two name slots and implements the icon.
 
 ### Check-in 3
-- 
-- 
+- We tried to do the dynamic import in class, but it wasn't rendering correctly. We couldn't get the header to be a seperate file and then slot it into our NHL card.
+- Liz wasn't able to make progress due to hockey games this past weekend, but she will be working on tomorrow morning and plans to post progress tomorrow.
+- The next steps are to get everything rendering correctly and then properly format the visuals while making everything reusable. The header / banner should have progress tomorrow. 
 ### Check-in 4
 - 
 - 
