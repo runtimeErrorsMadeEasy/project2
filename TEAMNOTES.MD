@@ -41,11 +41,11 @@
 #### What we did:
 We listened to the guest presenter Chuck Lavera walk us through his solution for the card comp project. As well as listening to Bryan critique The Table In The Corner and a few other group's card comps.
 
-- What approaches can you leverage from his example to enhance your team's element?
-The approaches our team could leverage from Chuck's example are how he uses CSS variables to handle the color-changing between the different card colors for the different elements of the card. Another approach our team could leverage from Chuck is how he used rendering to get the different parts of the card to work in the ways we need them to while also using slotting.
+What approaches can you leverage from his example to enhance your team's element?
+- The approaches our team could leverage from Chuck's example are how he uses CSS variables to handle the color-changing between the different card colors for the different elements of the card. Another approach our team could leverage from Chuck is how he used rendering to get the different parts of the card to work in the ways we need them to while also using slotting.
 
-- How could you take his approach and envision a more flexible version?
-Taking Chuck's approach on responsive design for the cards, my team could make it more flexible by using a different method that makes it more granular as Bryan talked about.
+How could you take his approach and envision a more flexible version?
+- Taking Chuck's approach on responsive design for the cards, my team could make it more flexible by using a different method that makes it more granular as Bryan talked about.
 
 #### What we'll do next:
 We plan to work on continue working on getting our card to look like the comp as well as take the things we learned from Chuck and the other groups and try to implement them in our project.
