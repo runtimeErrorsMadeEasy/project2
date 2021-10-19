@@ -6,4 +6,3 @@ import { LearningIcon } from './learningIcon.js';
 customElements.define(LearningCard.tag, LearningCard);
 customElements.define(LearningHeader.tag, LearningHeader);
 customElements.define(LearningIcon.tag, LearningIcon);
-

@@ -2,16 +2,11 @@
 import { LitElement, html, css } from 'lit';
 import './learningIcon.js';
 import './learningHeader.js';
-// this is the base path to the assets calculated at run time
-// this ensures that assets are shipped correctly when building the demo
-// on github pages, or when people reuse assets outside your elements in production
-// because this won't change we can leverage as an internal variable without being
-// declared in properties. This let's us ship the icons while referencing them correctly
+
 const beaker = new URL('../assets/beaker.svg', import.meta.url).href;
 const lightbulb = new URL('../assets/lightbulb.svg', import.meta.url).href;
 const question = new URL('../assets/question.svg', import.meta.url).href;
-// EXPORT (so make available to other documents that reference this file) a class, that extends LitElement
-// which has the magic life-cycles and developer experience below added
+
 export class LearningCard extends LitElement {
   // a convention I enjoy so you can change the tag name in 1 place
   static get tag() {
@@ -21,7 +16,7 @@ export class LearningCard extends LitElement {
   // HTMLElement life-cycle, built in; use this for setting defaults
   constructor() {
     super();
-    this.myIcon = lightbulb;
+    this.myIcon = question;
     this.type = 'connection';
   }
 
@@ -41,13 +36,13 @@ export class LearningCard extends LitElement {
   updated(changedProperties) {
     changedProperties.forEach((oldValue, propName) => {
       if (propName === 'type' && this[propName] === 'connection') {
-        this.myIcon = 'beaker';
+        this.myIcon = beaker;
       }
       if (propName === 'type' && this[propName] === 'objectives') {
-        this.myIcon = 'lightbulb';
+        this.myIcon = lightbulb;
       }
       if (propName === 'type' && this[propName] === 'review') {
-        this.myIcon = 'question';
+        this.myIcon = question;
       }
     });
   }
@@ -80,12 +75,6 @@ export class LearningCard extends LitElement {
         --learning-card-banner-color: green;
       }
 
-      img {
-        display: inline-flex;
-        height: var(--learning-card-height, 150px);
-        width: var(--learning-card-width, 150px);
-      }
-
       .cardContainer {
         padding: 30px;
         background-color: white;
@@ -96,14 +85,14 @@ export class LearningCard extends LitElement {
       }
       /* header container */
       .cardBanner {
-        background-color: orange;
+        background-color: darkorange;
         display: flex;
         flex-direction: row;
       }
 
       /* modify the style of the content */
-      .content {
-        font-family: "Lucida Console", "Courier New", monospace;
+      .cardContent {
+        font-family: 'Lucida Console', 'Courier New', monospace;
       }
 
       /* modify the container that the content is in */
@@ -112,31 +101,29 @@ export class LearningCard extends LitElement {
         border-top: transparent;
         padding-left: 190px;
       }
-
     `;
   }
-
 
   // HTML - specific to Lit
   render() {
     return html`
-      <div class="cardContainer">
+      <div class="cardContainer" >
         <div class="cardBanner">
-            <learning-icon type=${this.type}></learning-icon>
-            <learning-header></learning-header>
+        <learning-icon icon=${this.myIcon}></learning-icon>
+        <learning-header></learning-header>
           </div>
           <div class="cardContentContainer">
-            <div class="content">
+            <div slot="content" class="cardContent">
               <p>Paragraph starts</p>
               <ul>
-                <li>List Starts</li>
-                <li>Physics</li>
-                <li>Stat</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
               </ul>
               <ol>
-                <li>Numbered List starts</li>
+                <li>Numbered List</li>
               </ol>
-            </div>
+            </slot></div>
          </div>
         </div>
     `;
@@ -180,7 +167,7 @@ export class LearningCard extends LitElement {
         {
           tag: LearningCard.tag,
           properties: {
-            type: 'science',
+            type: 'connections',
           },
           content:
             "<p slot='header'>This tag renders in the header</p><ul><li>This renders</li><li>Below the tag</li></ul>",

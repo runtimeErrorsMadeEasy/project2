@@ -9,8 +9,7 @@ const question = new URL('../assets/question.svg', import.meta.url).href;
 export class LearningIcon extends SimpleColors {
   constructor() {
     super();
-    this.image = question;
-    this.dark = false;
+    this.icon = question;
   }
 
   static get tag() {
@@ -20,7 +19,7 @@ export class LearningIcon extends SimpleColors {
   static get properties() {
     return {
       ...super.properties,
-      image: { type: String, attribute: 'image' },
+      icon: { type: String },
     };
   }
 
@@ -36,6 +35,12 @@ export class LearningIcon extends SimpleColors {
           background-color: transparent;
         }
 
+        img {
+          display: inline-flex;
+          height: var(--learning-card-height, 150px);
+          width: var(--learning-card-width, 150px);
+        }
+
         .iconContainer {
           display: inline-flex;
           height: var(--learning-card-height, 150px);
@@ -49,8 +54,8 @@ export class LearningIcon extends SimpleColors {
 
   render() {
     return html`
-      <div class="iconContainer">
-        <img src="${this.image}" alt="Icon" /></span>
+      <div class="iconContainer" icon=${this.icon}>
+        <img src="${this.icon}" alt="Icon" />
       </div>
     `;
   }
