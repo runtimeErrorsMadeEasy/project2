@@ -30,11 +30,11 @@
 
 ### Meeting Date: 10/21
 
-#### What we did:
-
+#### What we did: 
+Today we listened to Bryan talk about what a linter is and why it is causing some people to be unable to commit to their group's repo. Then, He also talked about how to implement fonts using Google Font since another team was struggling with it. Finally, he talked about our team's code and how it is working well, and some of the things we can improve within our card. Some of the feedback Bryan gave us with what is work for our card the design of our card is great, that adding in the CSS variable within our render function is a great idea, and that repurposing our work from our button from the last project is a very smart thing to do. Some ways he said we could improve upon our card was to use slots, as well as to fix the error that was causing our project not to render.
 
 #### What we'll do next:
-
+Our next steps are going to be to continue working on improving our card and its elements, as well as write our individual blog posts that are due this Sunday.
 
 ### Meeting Date: 10/19
 
@@ -158,18 +158,25 @@ Next Steps: We plan to work on getting our individual blog posts and our group c
 
 ### Check-in 2
 What did you take away from the portion of class about implementing SimpleColors?
-- What we took away from the implementation of SimpleColors was that it is already a part of our repo so we just need to implement it. This will allow us to use names that are easier to understand for colors instead of their hex codes. As well as, make it easier for the colors to switch from light and dark modes for us.
+- We listened to Bryan show us SimpleColors so then we don't have to look up the hex code for the colors we want. It also has the accent and dark mode for the colors we pick. We tried to do the dynamic import in class, but it wasn't rendering correctly. We couldn't get the header to be a seperate file and then slot it into our NHL card.
 
 What did you learn from other groups?
 - We learned that we are in the same boat as other teams, where we are getting started and trying to figure out how to get all the elements to work the way we want them too.
 
 What are your next steps?
-- Our next steps are to get the icon to have basic API rendering, as well as the banner having API that supports two name slots and implements the icon.
+- Our next steps are to get the icon to have basic API rendering, as well as the banner having API that supports two name slots and implements the icon. 
+- Liz wasn't able to make progress due to hockey games this past weekend, but she will be working on tomorrow morning and plans to post progress tomorrow(10/19). Liz plans to get everything rendering correctly and then properly format the visuals while making everything reusable. The header/banner should have progress tomorrow(10/19).
 
 ### Check-in 3
-- We tried to do the dynamic import in class, but it wasn't rendering correctly. We couldn't get the header to be a seperate file and then slot it into our NHL card.
-- Liz wasn't able to make progress due to hockey games this past weekend, but she will be working on tomorrow morning and plans to post progress tomorrow.
-- The next steps are to get everything rendering correctly and then properly format the visuals while making everything reusable. The header / banner should have progress tomorrow. 
+Progress:
+- So far we have the design of the card how we want it to look as it matches the comp. We just need to add the specific content into the different elements within our card, as well as continue to improve our card and its different elements to get it working even better and how we want it to work.
+
+Problems:
+- A problem we were facing was our card not rendering because of an error with us using the custom element of the card header tag being used twice which make our card not render. Liz is currently confused with a build error that is happening, as she doesn't know what she did wrong.
+
+Next Steps:
+- Our next steps are going to be to continue working on improving our card and its elements so we, as well as write our individual blog posts that are due this Sunday.
+
 ### Check-in 4
 - 
 - 
