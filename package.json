@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@lrnwebcomponents/simple-colors": "^4.0.1",
+    "@polymer/polymer": "^3.4.1",
     "@runtimeerrorsmadeeasy/ctabutton": "^1.0.0",
     "lit": "^2.0.0"
   },

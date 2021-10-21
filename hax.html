@@ -39,7 +39,9 @@
   <script src="../../../node_modules/web-animations-js/web-animations-next-lite.min.js"></script>
   <script type="module">
     import "./src/app.js";
+    // eslint-disable-next-line import/no-extraneous-dependencies
     import "@lrnwebcomponents/h-a-x/h-a-x.js";
+
     import("@polymer/polymer/lib/utils/settings.js").then((esModule) => {
       esModule.setPassiveTouchGestures(true);
     });
