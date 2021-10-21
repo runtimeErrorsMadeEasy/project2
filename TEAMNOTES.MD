@@ -172,7 +172,7 @@ Progress:
 - So far we have the design of the card how we want it to look as it matches the comp. We just need to add the specific content into the different elements within our card, as well as continue to improve our card and its different elements to get it working even better and how we want it to work.
 
 Problems:
-- A problem we were facing was our card not rendering because of an error with us using the custom element of the card header tag being used twice which make our card not render. Liz is currently confused with a build error that is happening, as she doesn't know what she did wrong.
+- A problem we were facing was our card not rendering because of an error with us using the custom element of the card header tag being used twice which make our card not render.
 
 Next Steps:
 - Our next steps are going to be to continue working on improving our card and its elements so we, as well as write our individual blog posts that are due this Sunday.
