@@ -55,7 +55,7 @@ export class LearningIcon extends SimpleColors {
   render() {
     return html`
       <div class="iconContainer" icon=${this.icon}>
-        <img src="${this.icon}" alt="Icon" />
+        <img src="${this.icon}" alt="" />
       </div>
     `;
   }

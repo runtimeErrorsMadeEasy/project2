@@ -97,7 +97,6 @@ export class LearningCard extends LitElement {
 
       /* modify the style of the content */
       .cardContent {
-        font-family: 'Lucida Console', 'Courier New', monospace;
         width: 100%;
       }
 
