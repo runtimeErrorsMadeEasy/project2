@@ -2,16 +2,12 @@
 import { LitElement, html, css } from 'lit';
 import './learningIcon.js';
 import './learningHeader.js';
-// this is the base path to the assets calculated at run time
-// this ensures that assets are shipped correctly when building the demo
-// on github pages, or when people reuse assets outside your elements in production
-// because this won't change we can leverage as an internal variable without being
-// declared in properties. This let's us ship the icons while referencing them correctly
+import '@runtimeerrorsmadeeasy/ctabutton/cta-button.js';
+
 const beaker = new URL('../assets/beaker.svg', import.meta.url).href;
 const lightbulb = new URL('../assets/lightbulb.svg', import.meta.url).href;
 const question = new URL('../assets/question.svg', import.meta.url).href;
-// EXPORT (so make available to other documents that reference this file) a class, that extends LitElement
-// which has the magic life-cycles and developer experience below added
+
 export class LearningCard extends LitElement {
   // a convention I enjoy so you can change the tag name in 1 place
   static get tag() {
@@ -21,8 +17,8 @@ export class LearningCard extends LitElement {
   // HTMLElement life-cycle, built in; use this for setting defaults
   constructor() {
     super();
-    this.myIcon = lightbulb;
-    this.type = 'connection';
+    this.myIcon = question;
+    this.type = 'science';
   }
 
   // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
@@ -33,6 +29,7 @@ export class LearningCard extends LitElement {
       // attribute helps us bind the JS spec for variables names to the HTML spec
       // <learning-card my-icon="whatever" will set this.myIcon to "whatever"
       myIcon: { type: String, attribute: 'my-icon' },
+      bannerColor: { type: String, attribute: 'banner-color' },
     };
   }
 
@@ -40,14 +37,17 @@ export class LearningCard extends LitElement {
   // this allows you to react to variables changing and use javascript to perform logic
   updated(changedProperties) {
     changedProperties.forEach((oldValue, propName) => {
-      if (propName === 'type' && this[propName] === 'connection') {
-        this.myIcon = 'beaker';
+      if (propName === 'type' && this[propName] === 'math') {
+        this.myIcon = question;
+        this.bannerColor = 'purple';
       }
-      if (propName === 'type' && this[propName] === 'objectives') {
-        this.myIcon = 'lightbulb';
+      if (propName === 'type' && this[propName] === 'science') {
+        this.myIcon = beaker;
+        this.bannerColor = 'darkorange';
       }
-      if (propName === 'type' && this[propName] === 'review') {
-        this.myIcon = 'question';
+      if (propName === 'type' && this[propName] === 'technology') {
+        this.myIcon = lightbulb;
+        this.bannerColor = 'green';
       }
     });
   }
@@ -80,12 +80,6 @@ export class LearningCard extends LitElement {
         --learning-card-banner-color: green;
       }
 
-      img {
-        display: inline-flex;
-        height: var(--learning-card-height, 150px);
-        width: var(--learning-card-width, 150px);
-      }
-
       .cardContainer {
         padding: 30px;
         background-color: white;
@@ -96,46 +90,57 @@ export class LearningCard extends LitElement {
       }
       /* header container */
       .cardBanner {
-        background-color: orange;
+        background-color: var(--learning-card-banner-color);
         display: flex;
         flex-direction: row;
       }
 
       /* modify the style of the content */
-      .content {
-        font-family: "Lucida Console", "Courier New", monospace;
+      .cardContent {
+        font-family: 'Lucida Console', 'Courier New', monospace;
+        width: 100%;
       }
 
       /* modify the container that the content is in */
       .cardContentContainer {
         border: 1px solid black;
         border-top: transparent;
-        padding-left: 190px;
+        display: flex;
+        flex-direction: row;
+        padding: 0 100px;
       }
-
+      .buttonContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-items: flex;
+        width: 100%;
+        padding-bottom: 10px;
+      }
     `;
   }
-
 
   // HTML - specific to Lit
   render() {
     return html`
-      <div class="cardContainer">
-        <div class="cardBanner">
-            <learning-icon type=${this.type}></learning-icon>
-            <learning-header></learning-header>
+      <div class="cardContainer" >
+        <div class="cardBanner" style="--learning-card-banner-color: ${this.bannerColor}">
+        <learning-icon icon=${this.myIcon}></learning-icon>
+        <learning-header></learning-header>
           </div>
           <div class="cardContentContainer">
-            <div class="content">
-              <p>Paragraph starts</p>
+            <div slot="content" class="cardContent">
+            <p>Paragraph starts</p>
               <ul>
-                <li>List Starts</li>
-                <li>Physics</li>
-                <li>Stat</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
               </ul>
               <ol>
-                <li>Numbered List starts</li>
+                <li>Numbered List</li>
               </ol>
+            </div>
+  <div slot="button" class="buttonContainer"><cta-button icon="subject" title="${this.type}" style="--psu-background-color: ${this.bannerColor};"></cta-button></div>
             </div>
          </div>
         </div>
@@ -180,7 +185,7 @@ export class LearningCard extends LitElement {
         {
           tag: LearningCard.tag,
           properties: {
-            type: 'science',
+            type: 'connections',
           },
           content:
             "<p slot='header'>This tag renders in the header</p><ul><li>This renders</li><li>Below the tag</li></ul>",
