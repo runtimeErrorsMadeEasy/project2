@@ -120,7 +120,6 @@ export class LearningCard extends LitElement {
   }
 
   // HTML - specific to Lit
-  // Imported button
   render() {
     return html`
       <div class="cardContainer" >
