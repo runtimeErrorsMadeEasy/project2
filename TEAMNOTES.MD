@@ -1,5 +1,17 @@
 # Team Notes
 
+## Project Requirements
+- ✓Built based on card comp
+- Have 4 elements of Icon, Header/Banner, Card, & Scaffold
+- 1 element must inherit from 'SimpleColors'
+- Use '<slots>' tag
+- ✓3 demonstrations in the 'index.html' for the card demo
+- Card demo must include all elements with different implementations to them
+- Demo must use our 'button' tag, with 'slot' capabilities, which should be in our 'devDependencies'
+- 1 story per element, so 4 total
+- 1 test per element, so 4 total
+- Test should vary and can be for accessibility, attribute evaluation, or slot testing
+- Published to NPM by the due date of Nov. 2nd
 
 ## Meeting notes
 
@@ -23,10 +35,10 @@
 ### Meeting Date: 10/26
 
 #### What we did:
-
+Today Bryan showed us how to run test, as well as how to preform and modify those tests to work for our elements. After that we shared our repo with 
 
 #### What we'll do next:
-
+Our next steps are going to be 
 
 ### Meeting Date: 10/21
 
