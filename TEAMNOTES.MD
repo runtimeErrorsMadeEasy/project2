@@ -1,13 +1,13 @@
 # Team Notes
 
 ## Project Requirements
-- ✓Built based on card comp
+- Built based on card comp ✓
 - Have 4 elements of Icon, Header/Banner, Card, & Scaffold
-- 1 element must inherit from 'SimpleColors'
-- Use '<slots>' tag
-- ✓3 demonstrations in the 'index.html' for the card demo
+- 1 element must inherit from SimpleColors
+- Use slot tags
+- 3 demonstrations in the index.html for the card demo ✓
 - Card demo must include all elements with different implementations to them
-- Demo must use our 'button' tag, with 'slot' capabilities, which should be in our 'devDependencies'
+- Demo must use our button tag, with slot capabilities, which should be in our devDependencies
 - 1 story per element, so 4 total
 - 1 test per element, so 4 total
 - Test should vary and can be for accessibility, attribute evaluation, or slot testing
