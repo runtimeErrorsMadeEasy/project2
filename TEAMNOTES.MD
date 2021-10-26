@@ -2,18 +2,18 @@
 
 ## Project Requirements
 - Built based on card comp ✓
-- Have 4 elements of Icon, Header/Banner, Card, & Scaffold
-- 1 element must inherit from SimpleColors
-- Use slot tags
+- Have 4 elements of Icon, Header/Banner, Card, & Scaffold 
+- 1 element must inherit from SimpleColors ✓
+- Use slot tags 
 - 3 demonstrations in the index.html for the card demo ✓
-- Card demo must include all elements with different implementations to them
-- Demo must use our button tag, with slot capabilities, which should be in our devDependencies
-- 1 story per element, so 4 total
-- 1 test per element, so 4 total
+- Card demo must include all elements with different implementations to them 
+- Demo must use our button tag, with slot capabilities, which should be in our devDependencies 
+- 1 story per element, so 4 total 
+- 1 test per element, so 4 total 
 - Test should vary and can be for accessibility, attribute evaluation, or slot testing
-- Published to NPM by the due date of Nov. 2nd
+- Published to NPM by the due date of Nov. 2nd 
 
-## Meeting notes
+## Meeting Notes
 
 
 ### Meeting Date: 11/2
@@ -35,10 +35,10 @@
 ### Meeting Date: 10/26
 
 #### What we did:
-Today Bryan showed us how to run test, as well as how to preform and modify those tests to work for our elements. After that we shared our repo with 
+Today Bryan showed us a little bit on how to run tests, as well as how to perform and modify those tests to work for our elements. After that, we did a group activity where Liz and I shared our group repo with Viable Slime, while two members of Viable Slime shared theirs with us. Nick was also doing this with the team to our left.
 
 #### What we'll do next:
-Our next steps are going to be 
+Our next steps are going to be continuing to improve our card. We will do this by listening to the other team's feedback, as well as double-checking that we have all the requirements for this project.
 
 ### Meeting Date: 10/21
 
@@ -145,7 +145,7 @@ What should we call each of them?
 #### What we'll do next:
 Continue to learn more about how to create a card in Thursday's class.
 
-## Status check ins
+## Status Check-Ins
 
 
 ### Check-in 1
