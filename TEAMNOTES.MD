@@ -2,13 +2,13 @@
 
 ## Project Requirements
 - Built based on card comp ✓
-- Have 4 elements of Icon, Header/Banner, Card, & Scaffold 
+- Have 4 elements of Icon, Header/Banner, Card, & Scaffold ✓
 - 1 element must inherit from SimpleColors ✓
-- Use slot tags 
+- Use slot tags ✓
 - 3 demonstrations in the index.html for the card demo ✓
-- Card demo must include all elements with different implementations to them 
-- Demo must use our button tag, with slot capabilities, which should be in our devDependencies 
-- 1 story per element, so 4 total 
+- Card demo must include all elements with different implementations to them ✓
+- Demo must use our button tag, with slot capabilities ✓
+- 3 variations in the storybook
 - 1 test per element, so 4 total 
 - Test should vary and can be for accessibility, attribute evaluation, or slot testing
 - Published to NPM by the due date of Nov. 2nd 
@@ -27,10 +27,10 @@
 ### Meeting Date: 10/28
 
 #### What we did:
-
+We listened to Bryan answer the specific questions of PenStat and 3B4B at the beginning of class. Then we got to work on our own card and Liz specifically worked on getting the accessibility to work for all of our elements. While Nick and Adam were working on getting the tests working. Finally I was working on the teamnotes and storybook.
 
 #### What we'll do next:
-
+We plan to continue to work on getting all the requirements of the card done for Tuesday.
 
 ### Meeting Date: 10/26
 
@@ -190,5 +190,7 @@ Next Steps:
 - Our next steps are going to be to continue working on improving our card and its elements so we, as well as write our individual blog posts that are due this Sunday.
 
 ### Check-in 4
-- 
-- 
+Questions:
+- How do we wrap the different elements?
+- What improvements do you think need to be made?
+- Our group will probably come up with other questions we will ask Tuesday
