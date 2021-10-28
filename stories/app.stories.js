@@ -17,11 +17,9 @@ export const MathCard = Template.bind({});
 export const ScienceCard = Template.bind({});
 ScienceCard.args = {
   type: 'science',
-  slot: html`<p>slotted content that should render</p>`,
 };
 
 export const TechnologyCard = Template.bind({});
 TechnologyCard.args = {
   type: 'technology',
-  slot: html`<p>slotted content that should render</p>`,
 };
