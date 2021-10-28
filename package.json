@@ -24,7 +24,8 @@
     "@lrnwebcomponents/simple-colors": "^4.0.1",
     "@polymer/polymer": "^3.4.1",
     "@runtimeerrorsmadeeasy/ctabutton": "^1.0.0",
-    "lit": "^2.0.0"
+    "lit": "^2.0.0",
+    "lit-html": "^2.0.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.15.6",
