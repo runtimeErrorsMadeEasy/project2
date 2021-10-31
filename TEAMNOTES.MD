@@ -193,4 +193,5 @@ Next Steps:
 Questions:
 - How do we wrap the different elements?
 - What improvements do you think need to be made?
+- How to properly have `app.test.js` see the `.cardBanner` Div to be able to test the contents of the headers?
 - Our group will probably come up with other questions we will ask Tuesday
