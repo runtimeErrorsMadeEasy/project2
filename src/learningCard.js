@@ -95,6 +95,7 @@ export class LearningCard extends LitElement {
         background-color: var(--learning-card-banner-color);
         display: flex;
         flex-direction: row;
+        padding-right: 5px;
       }
       /* modify the container that the content is in */
       .cardContentContainer {
@@ -106,17 +107,28 @@ export class LearningCard extends LitElement {
       }
 
       .textContainer {
-        border: 1px solid black;
         display: flex;
         flex-direction: row;
-        width: 100%;
+        width: 80%;
       }
 
       .buttonContainer {
         display: flex;
         flex-direction: row;
         align-items: end;
-        border: 1px solid black;
+        padding-bottom: 5px;
+        padding-right: 5px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .cardContainer {
+          padding: 30px;
+          background-color: white;
+          border-width: 1px;
+          display: flex;
+          flex-direction: column;
+          border-color: black;
+        }
       }
     `;
   }

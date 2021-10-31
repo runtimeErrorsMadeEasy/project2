@@ -27,6 +27,7 @@ export class LearningContent extends SimpleColors {
         }
         .cardContent {
           flex-direction: column;
+          padding-left: 10px;
         }
       `,
     ];
