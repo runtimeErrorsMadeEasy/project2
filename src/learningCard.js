@@ -64,7 +64,22 @@ export class LearningCard extends LitElement {
         display: block;
         --learning-card-banner-color: green;
       }
-
+      @media only screen and (max-width: 800px) {
+        :host .cardBanner {
+          background-color: var(--learning-card-banner-color);
+          display: inline-block;
+          flex-direction: row;
+          padding-right: 0px;
+          padding-left: 10px;
+        }
+        :host .cardContentContainer {
+          display: inline-block;
+          border: 1px solid black;
+          border-top: transparent;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+      }
       .cardContainer {
         padding: 30px;
         background-color: white;
@@ -77,8 +92,10 @@ export class LearningCard extends LitElement {
       .cardBanner {
         background-color: var(--learning-card-banner-color);
         display: flex;
+        justify-content: '';
         flex-direction: row;
         padding-right: 5px;
+        padding-left: 0px;
       }
       /* modify the container that the content is in */
       .cardContentContainer {

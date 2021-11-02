@@ -28,8 +28,6 @@ export class LearningHeader extends SimpleColors {
           color: var(--simple-colors-default-theme-grey-1);
         }
         #headers {
-          padding: 0px;
-          margin: 0px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -41,11 +39,10 @@ export class LearningHeader extends SimpleColors {
           font-size: 50px;
           margin: 0;
           padding-left: 30px;
-          padding-top: 20px;
         }
         #sub-header {
-          font-weight: 1000;
-          font-size: 50px;
+          font-weight: lighter;
+          font-size: 35px;
           margin: 0;
           padding-left: 30px;
         }
@@ -55,12 +52,10 @@ export class LearningHeader extends SimpleColors {
 
   render() {
     return html` <div>
-      <slot>
-        <div id="headers">
-          <h2><slot id="main-header" name="main-header">main header</slot></h2>
-          <h3><slot id="sub-header" name="sub-header">sub header</slot></h3>
-        </div>
-      </slot>
+      <div id="headers">
+        <h2><slot id="main-header" name="main-header">main header</slot></h2>
+        <h3><slot id="sub-header" name="sub-header">sub header</slot></h3>
+      </div>
     </div>`;
   }
 }
