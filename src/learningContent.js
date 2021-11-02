@@ -36,14 +36,10 @@ export class LearningContent extends SimpleColors {
   render() {
     return html`
       <div class="cardContent">
-        <p>Paragraph starts</p>
-        <ul>
-          <li>Test</li>
-          <li>Test</li>
-          <li>Test</li>
-        </ul>
+        <p><slot name="paragraph-format">Paragraph starts</slot></p>
+        <li><slot name="bullet-list">Test</slot></li>
         <ol>
-          <li>Numbered List</li>
+          <slot name="number-list"><li>Numbered List</li></slot>
         </ol>
       </div>
     `;
