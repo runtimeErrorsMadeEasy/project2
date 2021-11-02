@@ -1,5 +1,3 @@
-// dependencies / things imported
-// test
 import { LitElement, html, css } from 'lit';
 import './learningIcon.js';
 import './learningHeader.js';
@@ -11,32 +9,24 @@ const lightbulb = new URL('../assets/lightbulb.svg', import.meta.url).href;
 const question = new URL('../assets/question.svg', import.meta.url).href;
 
 export class LearningCard extends LitElement {
-  // a convention I enjoy so you can change the tag name in 1 place
   static get tag() {
     return 'learning-card';
   }
 
-  // HTMLElement life-cycle, built in; use this for setting defaults
   constructor() {
     super();
     this.myIcon = question;
     this.type = 'science';
   }
 
-  // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
   static get properties() {
     return {
-      // reflect allows state changes to the element's property to be leveraged in CSS selectors
       type: { type: String, reflect: true },
-      // attribute helps us bind the JS spec for variables names to the HTML spec
-      // <learning-card my-icon="whatever" will set this.myIcon to "whatever"
       myIcon: { type: String, attribute: 'my-icon' },
       bannerColor: { type: String, attribute: 'banner-color' },
     };
   }
 
-  // updated fires every time a property defined above changes
-  // this allows you to react to variables changing and use javascript to perform logic
   updated(changedProperties) {
     changedProperties.forEach((oldValue, propName) => {
       if (propName === 'type' && this[propName] === 'math') {
@@ -54,10 +44,20 @@ export class LearningCard extends LitElement {
     });
   }
 
-  // Lit life-cycle; this fires the 1st time the element is rendered on the screen
-  // this is a sign it is safe to make calls to this.shadowRoot
+  firstUpdated(changedProperties) {
+    if (super.firstUpdated) {
+      super.firstUpdated(changedProperties);
+    }
+  }
 
-  // CSS - specific to Lit
+  connectedCallback() {
+    super.connectedCallback();
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+  }
+
   static get styles() {
     return css`
       :host {
@@ -105,8 +105,6 @@ export class LearningCard extends LitElement {
     `;
   }
 
-  // HTML - specific to Lit
-  // Imported button
   render() {
     return html`
       <div class="cardContainer">
@@ -132,12 +130,6 @@ export class LearningCard extends LitElement {
       </div>
     `;
   }
-
-  // HAX specific callback
-  // This teaches HAX how to edit and work with your web component
-  /**
-   * haxProperties integration via file reference
-   */
 
   static get haxProperties() {
     return {
