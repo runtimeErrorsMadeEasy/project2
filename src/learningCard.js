@@ -131,7 +131,9 @@ export class LearningCard extends LitElement {
         >
           <learning-icon icon=${this.myIcon}></learning-icon>
           <learning-header>
-            <div slot="main-header"><slot name="header">Main Header</slot></div>
+            <div slot="main-header">
+              <slot name="header" style="">Main Header</slot>
+            </div>
             <div slot="sub-header">
               <slot name="subheader">Sub Header</slot>
             </div>

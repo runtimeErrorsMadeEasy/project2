@@ -24,7 +24,6 @@ export class LearningHeader extends SimpleColors {
       css`
         :host {
           display: block;
-          background-color: transparent;
           color: var(--simple-colors-default-theme-grey-1);
         }
         #headers {
@@ -37,13 +36,11 @@ export class LearningHeader extends SimpleColors {
         #main-header {
           font-weight: lighter;
           font-size: 50px;
-          margin: 0;
           padding-left: 30px;
         }
         #sub-header {
           font-weight: lighter;
           font-size: 35px;
-          margin: 0;
           padding-left: 30px;
         }
       `,
