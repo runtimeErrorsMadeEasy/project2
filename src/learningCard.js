@@ -132,19 +132,28 @@ export class LearningCard extends LitElement {
           style="--learning-card-banner-color: ${this.bannerColor}"
         >
           <learning-icon icon=${this.myIcon}></learning-icon>
-          <learning-header></learning-header>
+          <learning-header>
+            <div slot="main-header"><slot name="header">Main Header</slot></div>
+            <div slot="sub-header">
+              <slot name="subheader">Sub Header</slot>
+            </div>
+          </learning-header>
         </div>
         <div class="cardContentContainer">
-          <slot class="textContainer"
-            ><learning-content></learning-content
-          ></slot>
-          <slot class="buttonContainer"
-            ><cta-button
+          <div class="textContainer">
+            <learning-content>
+              <div slot="paragraph-format">
+                <slot name="paragraph">Paragraph</slot>
+              </div>
+            </learning-content>
+          </div>
+          <div class="buttonContainer" name="button">
+            <cta-button
               icon="subject"
               title="${this.type}"
               style="--psu-background-color: ${this.bannerColor};"
-            ></cta-button
-          ></slot>
+            ></cta-button>
+          </div>
         </div>
       </div>
     `;
