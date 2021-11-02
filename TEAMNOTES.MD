@@ -76,7 +76,8 @@ We plan to work on getting the icon and banner working for this Sunday's check-i
 We listened to Bryan give feedback for our project 1 buttons, as well as what performance optimization techniques that we might want to use for our second project. We also worked on getting our started card.
 
 #### What we'll do next:
-We plan to work on the two articles we need to read for Thursday, as well as continuing our progress on our card.
+We plan to work on the two articles we need to read for Thursday, as  <div class="cardContainer" >
+        <div class="cardBanner" style="--learning-card-banner-color: ${this.bannerColor}">well as continuing our progress on our card.
 
 ### Meeting Date: 10/7
 
@@ -192,6 +193,50 @@ Next Steps:
 ### Check-in 4
 Questions:
 - How do we wrap the different elements?
+          
+**If by wrap you mean create the wrapper element it is the logic like this:**
+```html
+ <div class="cardContainer" >
+        <div class="cardBanner" style="--learning-card-banner-color: ${this.bannerColor}">
+```
+**Generally the wrapper / scaffold element is just some divs and slots for styling. This then makes your card element look like this:
+```html
+    <learning-scaffold>
+      <learning-header slot="header">
+        <slot name="header-text"></slot>
+        <slot name="subheader-text"></slot>
+      </learning-header>
+      <div slot="content"><slot></slot></div>
+    </learning-scaffold>        
+```
+        
 - What improvements do you think need to be made?
+**You need to work on ensuring written text like "heading" and "subheading" are correctly implemented using named `slot` tags. Your demo should read more like...
+```html
+<learning-card type="math">
+  <h2 slot="header-text">My header text</h2>
+  <h3 slot="subheader-text">The sub header</h3>
+  <p>ALl the loverly content I could ever want to write.</p>
+  <ul>
+    <li>THis also will render because of the generic slot tag in the previous example</li>
+  </ul>
+</learning-card>
+```
 - How to properly have `app.test.js` see the `.cardBanner` Div to be able to test the contents of the headers?
+  **With your current setup, which I would recommend improving upon based on above because of the need to implement slot tags correctly. However in the curent setup you could do something like this:**
+      ```js
+          
+  it('renders a h2', () => {
+    const h2 = element.shadowRoot.querySelector('.cardBanner learning-header').shadowRoot.querySelector("h2");
+    expect(h2).to.exist;
+    expect(h2.textContent).to.equal('main header');
+  });
+          ```
+          **This works by walking through your element's shadowRoot, then doing a querySelector which is any CSS selector that is valid. From there you can step down into the shadowRoot's of things that you select to target specific details within. You can also interogate the `slot` tag directly and see what material has been set there like so:
+          ```js
+            const slot = this.shadowRoot.querySelector('slot[name=header]');
+  slot.assignedNodes({flatten: true});
+          ```
+          THis will give you an array of nodes that are assigned to the slot named 'header' in this instance. You can then treat this like an array so `slot.assignedNodes({flatten: true})[0]` might be a reference to the 1st `h2` tag that was slotted in.
+          
 - Our group will probably come up with other questions we will ask Tuesday
