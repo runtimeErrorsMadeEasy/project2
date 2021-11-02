@@ -3,6 +3,7 @@
 import { LitElement, html, css } from 'lit';
 import './learningIcon.js';
 import './learningHeader.js';
+import './learningContent.js';
 import '@runtimeerrorsmadeeasy/ctabutton/cta-button.js';
 
 const beaker = new URL('../assets/beaker.svg', import.meta.url).href;
@@ -94,28 +95,40 @@ export class LearningCard extends LitElement {
         background-color: var(--learning-card-banner-color);
         display: flex;
         flex-direction: row;
+        padding-right: 5px;
       }
-
-      /* modify the style of the content */
-      .cardContent {
-        width: 100%;
-      }
-
       /* modify the container that the content is in */
       .cardContentContainer {
+        display: flex;
         border: 1px solid black;
         border-top: transparent;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      .textContainer {
         display: flex;
         flex-direction: row;
-        padding: 0 100px;
+        width: 80%;
       }
+
       .buttonContainer {
         display: flex;
         flex-direction: row;
         align-items: end;
-        justify-items: flex;
-        width: 100%;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
+        padding-right: 5px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .cardContainer {
+          padding: 30px;
+          background-color: white;
+          border-width: 1px;
+          display: flex;
+          flex-direction: column;
+          border-color: black;
+        }
       }
     `;
   }
@@ -124,27 +137,27 @@ export class LearningCard extends LitElement {
   // Imported button
   render() {
     return html`
-      <div class="cardContainer" >
-        <div class="cardBanner" style="--learning-card-banner-color: ${this.bannerColor}">
-        <learning-icon icon=${this.myIcon}></learning-icon>
-        <learning-header></learning-header>
-          </div>
-          <div class="cardContentContainer">
-            <div slot="content" class="cardContent">
-            <p>Paragraph starts</p>
-              <ul>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-              </ul>
-              <ol>
-                <li>Numbered List</li>
-              </ol>
-            </div>
-  <div slot="button" class="buttonContainer"><cta-button icon="subject" title="${this.type}" style="--psu-background-color: ${this.bannerColor};"></cta-button></div>
-            </div>
-         </div>
+      <div class="cardContainer">
+        <div
+          class="cardBanner"
+          style="--learning-card-banner-color: ${this.bannerColor}"
+        >
+          <learning-icon icon=${this.myIcon}></learning-icon>
+          <learning-header></learning-header>
         </div>
+        <div class="cardContentContainer">
+          <slot class="textContainer"
+            ><learning-content></learning-content
+          ></slot>
+          <slot class="buttonContainer"
+            ><cta-button
+              icon="subject"
+              title="${this.type}"
+              style="--psu-background-color: ${this.bannerColor};"
+            ></cta-button
+          ></slot>
+        </div>
+      </div>
     `;
   }
 
