@@ -41,14 +41,20 @@ export class LearningCard extends LitElement {
     changedProperties.forEach((oldValue, propName) => {
       if (propName === 'type' && this[propName] === 'math') {
         this.myIcon = question;
+        console.log(this.icon);
+        console.log('question');
         this.bannerColor = 'purple';
       }
       if (propName === 'type' && this[propName] === 'science') {
         this.myIcon = beaker;
+        console.log(this.icon);
+        console.log('beaker');
         this.bannerColor = 'darkorange';
       }
       if (propName === 'type' && this[propName] === 'technology') {
         this.myIcon = lightbulb;
+        console.log(this.icon);
+        console.log('lightbulb');
         this.bannerColor = 'green';
       }
     });
