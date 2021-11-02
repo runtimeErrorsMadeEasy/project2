@@ -224,19 +224,20 @@ Questions:
 ```
 - How to properly have `app.test.js` see the `.cardBanner` Div to be able to test the contents of the headers?
   **With your current setup, which I would recommend improving upon based on above because of the need to implement slot tags correctly. However in the curent setup you could do something like this:**
-      ```js
+          
+```js
           
   it('renders a h2', () => {
     const h2 = element.shadowRoot.querySelector('.cardBanner learning-header').shadowRoot.querySelector("h2");
     expect(h2).to.exist;
     expect(h2.textContent).to.equal('main header');
   });
-          ```
-          **This works by walking through your element's shadowRoot, then doing a querySelector which is any CSS selector that is valid. From there you can step down into the shadowRoot's of things that you select to target specific details within. You can also interogate the `slot` tag directly and see what material has been set there like so:
-          ```js
-            const slot = this.shadowRoot.querySelector('slot[name=header]');
-  slot.assignedNodes({flatten: true});
-          ```
-          THis will give you an array of nodes that are assigned to the slot named 'header' in this instance. You can then treat this like an array so `slot.assignedNodes({flatten: true})[0]` might be a reference to the 1st `h2` tag that was slotted in.
+```
+**This works by walking through your element's shadowRoot, then doing a querySelector which is any CSS selector that is valid. From there you can step down into the shadowRoot's of things that you select to target specific details within. You can also interogate the `slot` tag directly and see what material has been set there like so:
+```js
+const slot = this.shadowRoot.querySelector('slot[name=header]');
+slot.assignedNodes({flatten: true});
+```
+This will give you an array of nodes that are assigned to the slot named 'header' in this instance. You can then treat this like an array so `slot.assignedNodes({flatten: true})[0]` might be a reference to the 1st `h2` tag that was slotted in.
           
 - Our group will probably come up with other questions we will ask Tuesday
