@@ -56,23 +56,6 @@ export class LearningCard extends LitElement {
 
   // Lit life-cycle; this fires the 1st time the element is rendered on the screen
   // this is a sign it is safe to make calls to this.shadowRoot
-  firstUpdated(changedProperties) {
-    if (super.firstUpdated) {
-      super.firstUpdated(changedProperties);
-    }
-  }
-
-  // HTMLElement life-cycle, element has been connected to the page / added or moved
-  // this fires EVERY time the element is moved
-  connectedCallback() {
-    super.connectedCallback();
-  }
-
-  // HTMLElement life-cycle, element has been removed from the page OR moved
-  // this fires every time the element moves
-  disconnectedCallback() {
-    super.disconnectedCallback();
-  }
 
   // CSS - specific to Lit
   static get styles() {
@@ -118,17 +101,6 @@ export class LearningCard extends LitElement {
         align-items: end;
         padding-bottom: 5px;
         padding-right: 5px;
-      }
-
-      @media screen and (max-width: 600px) {
-        .cardContainer {
-          padding: 30px;
-          background-color: white;
-          border-width: 1px;
-          display: flex;
-          flex-direction: column;
-          border-color: black;
-        }
       }
     `;
   }
