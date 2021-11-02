@@ -38,7 +38,7 @@ export class LearningHeader extends SimpleColors {
 
         #main-header {
           font-weight: lighter;
-          font-size: 30px;
+          font-size: 50px;
           margin: 0;
           padding-left: 30px;
           padding-top: 20px;
@@ -57,8 +57,8 @@ export class LearningHeader extends SimpleColors {
     return html` <div>
       <slot>
         <div id="headers">
-          <h2 id="main-header">main header</h2>
-          <h3 id="sub-header">sub headers</h3>
+          <h2><slot id="main-header" name="main-header">main header</slot></h2>
+          <h3><slot id="sub-header" name="sub-header">sub header</slot></h3>
         </div>
       </slot>
     </div>`;
