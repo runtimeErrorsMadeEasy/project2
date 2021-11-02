@@ -4,13 +4,13 @@
 - Built based on card comp ✓
 - Have 4 elements of Icon, Header/Banner, Card, & Scaffold ✓
 - 1 element must inherit from SimpleColors ✓
-- Use slot tags ✓
+- Uses slot tags ✓
 - 3 demonstrations in the index.html for the card demo ✓
 - Card demo must include all elements with different implementations to them ✓
 - Demo must use our button tag, with slot capabilities ✓
-- 3 variations in the storybook
-- 1 test per element, so 4 total 
-- Test should vary and can be for accessibility, attribute evaluation, or slot testing
+- 3 variations of the card in the storybook ✓
+- 1 test per element, so 4 total tests 
+- Test should vary and can be for accessibility, attribute evaluation, or slot testing 
 - Published to NPM by the due date of Nov. 2nd 
 
 ## Meeting Notes
@@ -19,10 +19,10 @@
 ### Meeting Date: 11/2
 
 #### What we did:
-
+We listened to the comments that Bryan gave to our repo. He talked about how we need to make more of our content slotted, so it can be repurposed, as well as answered the question about our testing issue.
 
 #### What we'll do next:
-
+We will finish getting our content slotted currectly, as well as get our tests finalized and passing. Once we finish those things we will upload our final project to NPM before Bryan wakes up on Wednesday.
 
 ### Meeting Date: 10/28
 
