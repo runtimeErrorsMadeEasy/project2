@@ -12,7 +12,7 @@ describe('LearningCard', () => {
       <p>ALl the loverly content I could ever want to write.</p>
       <ul>
         <li>
-          THis also will render because of the generic slot tag in the previous
+          This also will render because of the generic slot tag in the previous
           example
         </li>
       </ul>
