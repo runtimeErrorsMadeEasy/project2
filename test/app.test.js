@@ -6,15 +6,17 @@ import '../src/app.js';
 describe('LearningCard', () => {
   let element;
   beforeEach(async () => {
-    element = await fixture(html`<learningHeader type="math">
-    <h2>="main-header">My header text</h2>
+    element = await fixture(html`<learning-card type="math">
+      <h2>My header text</h2>
       <h3>The sub header</h3>
       <p>ALl the loverly content I could ever want to write.</p>
       <ul>
-        <li>THis also will render because of the generic slot tag in the previous example</li>
+        <li>
+          THis also will render because of the generic slot tag in the previous
+          example
+        </li>
       </ul>
-    </learning-card>
-    `);
+    </learning-card> `);
   });
 
   it('renders main content', () => {
