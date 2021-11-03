@@ -7,7 +7,7 @@ describe('LearningCard', () => {
   let element;
   beforeEach(async () => {
     element = await fixture(html`<learningHeader slot="banner" type="math">
-      <h2 slot="main-header">unit 1</h2>
+      <h2 slot="main-header">testing my dumb tests</h2>
       <h3 slot="sub-header">this is what pain looks like</h3>
     </learningHeader> `);
   });
@@ -20,7 +20,7 @@ describe('LearningCard', () => {
   it('renders the main header', () => {
     const h2 = element.querySelector('h2');
     expect(h2).to.exist;
-    expect(h2.innerText).to.equal('unit 1');
+    expect(h2.innerText).to.equal('testing my dumb tests');
   });
 
   it('renders the sub header', () => {
