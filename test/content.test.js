@@ -6,18 +6,13 @@ import '../src/learningCard.js';
 describe('LearningCard', () => {
   let element;
   beforeEach(async () => {
-    element = await fixture(html`<learningContent slot="cardContentBanner">
+    element = await fixture(html`<learning-content slot="cardContentBanner">
       <p slot="paragraph-format">this is my content for my paragrapgh tests</p>
       <li slot="bullet-list">patiently waiting for Halo Infinite</li>
       <ol slot="number-list">
         <li>Numbered List hopefully</li>
       </ol>
-    </learningContent> `);
-  });
-
-  it('renders the paragrapgh element', () => {
-    const para = document.querySelector('learningContent');
-    expect(para).to.exist;
+    </learning-content> `);
   });
 
   it('renders the paragraph content', () => {
