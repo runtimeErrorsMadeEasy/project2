@@ -6,16 +6,11 @@ import '../src/learningIcon.js';
 describe('learningIcon', () => {
   let element;
   beforeEach(async () => {
-    element = await fixture(html`<learningIcon
+    element = await fixture(html`<learning-icon
       type="science"
       style="bannerColor: darkorange"
     >
-    </learningIcon> `);
-  });
-
-  it('renders the element', () => {
-    const icon = document.querySelector('learningIcon');
-    expect(icon).to.exist;
+    </learning-icon> `);
   });
 
   it('checks updatedProperties', () => {

@@ -6,15 +6,10 @@ import '../src/learningCard.js';
 describe('LearningCard', () => {
   let element;
   beforeEach(async () => {
-    element = await fixture(html`<learningHeader slot="banner" type="math">
+    element = await fixture(html`<learning-header slot="banner" type="math">
       <h2 slot="main-header">testing my dumb tests</h2>
       <h3 slot="sub-header">this is what pain looks like</h3>
-    </learningHeader> `);
-  });
-
-  it('renders the header element', () => {
-    const header = document.querySelector('learningHeader');
-    expect(header).to.exist;
+    </learning-header> `);
   });
 
   it('renders the main header', () => {

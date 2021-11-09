@@ -44,20 +44,6 @@ export class LearningCard extends LitElement {
     });
   }
 
-  firstUpdated(changedProperties) {
-    if (super.firstUpdated) {
-      super.firstUpdated(changedProperties);
-    }
-  }
-
-  connectedCallback() {
-    super.connectedCallback();
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback();
-  }
-
   static get styles() {
     return css`
       :host {
@@ -132,7 +118,7 @@ export class LearningCard extends LitElement {
           <learning-icon icon=${this.myIcon}></learning-icon>
           <learning-header>
             <div slot="main-header">
-              <slot name="header" style="">Main Header</slot>
+              <slot name="header">Main Header</slot>
             </div>
             <div slot="sub-header">
               <slot name="subheader">Sub Header</slot>

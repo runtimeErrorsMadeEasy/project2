@@ -1,26 +1,12 @@
-import { html, css } from 'lit';
-import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors';
+import { html, css, LitElement } from 'lit';
 
-export class LearningContent extends SimpleColors {
-  constructor() {
-    super();
-    this.accentColor = 'pink';
-    this.dark = false;
-  }
-
+export class LearningContent extends LitElement {
   static get tag() {
     return 'learning-content';
   }
 
-  static get properties() {
-    return {
-      ...super.properties,
-    };
-  }
-
   static get styles() {
     return [
-      ...super.styles,
       css`
         :host {
           display: flex;
